@@ -1,0 +1,15 @@
+{
+  "name": "thephotocourse",
+  "version": "1.0.0",
+  "description": "The Photo Course - Photography and darkroom film courses",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "keywords": ["photography", "courses", "darkroom"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}

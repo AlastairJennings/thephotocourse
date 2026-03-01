@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ description or 'The Photo Course — photography and darkroom film courses for all levels.' }}">
+  <title>{% if title %}{{ title }} | {% endif %}The Photo Course</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="site-logo">
+          <span class="logo-mark">TPC</span>
+          <span class="logo-text">The Photo Course</span>
+        </a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul class="nav-list">
+            <li><a href="/" class="nav-link">Home</a></li>
+            <li><a href="/courses/" class="nav-link">Courses</a></li>
+            <li><a href="/darkroom/" class="nav-link">Darkroom</a></li>
+            <li><a href="/about/" class="nav-link">About</a></li>
+            <li><a href="/contact/" class="nav-link nav-link--cta">Book a Course</a></li>
+          </ul>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="site-logo">
+            <span class="logo-mark">TPC</span>
+            <span class="logo-text">The Photo Course</span>
+          </a>
+          <p class="footer-tagline">Learn photography and darkroom film craft with expert tutors.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <h3 class="footer-heading">Courses</h3>
+          <ul>
+            <li><a href="/courses/">All Courses</a></li>
+            <li><a href="/darkroom/">Darkroom & Film</a></li>
+            <li><a href="/courses/beginners/">Beginners Photography</a></li>
+            <li><a href="/courses/portrait/">Portrait Photography</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-nav" aria-label="Site navigation">
+          <h3 class="footer-heading">Site</h3>
+          <ul>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/gallery/">Gallery</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer-contact">
+          <h3 class="footer-heading">Get in Touch</h3>
+          <p>Ready to start your photography journey?</p>
+          <a href="/contact/" class="btn btn--outline">Book a Course</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; {{ currentYear }} thephotocourse.com. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
