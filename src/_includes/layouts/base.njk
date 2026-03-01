@@ -6,7 +6,7 @@
   <title>{% if title %}{{ title }} | {% endif %}The Photo Course</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -49,6 +49,8 @@
             </a>
           </div>
 
+          <a href="/enroll/" class="enroll-btn">Enroll</a>
+
           <div class="header-search" id="headerSearch">
             <button class="search-toggle" id="searchToggle" aria-label="Toggle search" aria-expanded="false">
               <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -85,8 +87,59 @@
 
   {{ content | safe }}
 
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="/" class="footer-logo" aria-label="The Photo Course">
+            <span class="logo-text">ThePhotoCourse</span>
+          </a>
+          <p class="footer-tagline">Learn professional photography from industry experts. Master your craft with comprehensive courses and resources.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Courses</h4>
+          <ul>
+            <li><a href="/courses/">All Courses</a></li>
+            <li><a href="/courses/introduction-to-photography/">Introduction to Photography</a></li>
+            <li><a href="/courses/film-darkroom/">Film &amp; Darkroom</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Resources</h4>
+          <ul>
+            <li><a href="/resources/fact-sheets/">Fact Sheets</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">About</h4>
+          <ul>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/privacy/">Privacy Policy</a></li>
+            <li><a href="/terms/">Terms and Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Follow</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
   <script>
-    // Search toggle
     const searchToggle = document.getElementById('searchToggle');
     const searchBox    = document.getElementById('searchBox');
     const searchInput  = document.getElementById('searchInput');
@@ -115,7 +168,6 @@
       }
     });
 
-    // Hamburger toggle
     const navToggle = document.getElementById('navToggle');
     const siteNav   = document.getElementById('siteNav');
 
