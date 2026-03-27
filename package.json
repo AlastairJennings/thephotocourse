@@ -4,7 +4,9 @@
   "description": "The Photo Course - Photography and darkroom film courses",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "deploy": "npm run build && wrangler deploy",
+    "preview": "npm run build && wrangler dev"
   },
   "keywords": [
     "photography",
@@ -15,6 +17,6 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
-    "wrangler": "^4.69.0"
+    "wrangler": "^4.77.0"
   }
 }
